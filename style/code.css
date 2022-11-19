@@ -1,11 +1,33 @@
+
+.java-ex p.code{
+    width: 50%;
+    min-width: 300px;
+    font-size: .70em;
+    margin: auto;
+    padding:15px;
+    background-color: rgb(10, 10, 10);
+    border-radius: 10px;
+}
 .code{
     font-family: monospace;
     padding: 0;
     margin: 0;
 }
+.java-ex{
+    overflow: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.java-ex::-webkit-scrollbar{
+    display: none;  /* Safari and Chrome */
+}
 .code *{
     font-family: monospace;
 }
+.code span.blank{
+    color:#fff;
+}
+
 .code span.default{
     color:#f97583;
 }
@@ -20,4 +42,7 @@
 }
 .code span.comment{
     color:#6a737d;
+}
+strong{
+    color:rgba(243, 129, 129, 0.848)
 }
