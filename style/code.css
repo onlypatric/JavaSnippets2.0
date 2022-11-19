@@ -1,0 +1,23 @@
+.code{
+    font-family: monospace;
+    padding: 0;
+    margin: 0;
+}
+.code *{
+    font-family: monospace;
+}
+.code span.default{
+    color:#f97583;
+}
+.code span.class-method{
+    color:#b392f0;
+}
+.code span.br1{
+    color:#ffab70;
+}
+.code span.br2{
+    color:#79b8ff;
+}
+.code span.comment{
+    color:#6a737d;
+}

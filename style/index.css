@@ -1,5 +1,5 @@
 /*Global settings*/
-*{
+*:not(.code *,.code){
     margin: 0;
     padding: 0;
     transition: all 1s linear;
@@ -197,4 +197,35 @@ div.data-show{
     margin: 0;
     text-align: center;
     color:#fff;
+}
+.code,.code *{
+    font-family: monospace;
+    color:#fff;
+}
+.java-ex{
+    width: 100%;
+    height: 100%;
+}
+.java-ex h1.title,.java-ex h2.title,.java-ex h3.title,.java-ex h4.title{
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    text-transform: none;
+    color: #fff;
+}
+.java-ex .desc{
+    width: 90%;
+    max-width: 500px;
+    text-align: justify;
+    text-align-last: center;
+    margin: auto;
+    padding: 2.5%;
+    font-size: 19px;
+    color:#fff;
+}
+.java-ex .bottom{
+    position: absolute;
+    bottom: 0;
+    left:0;
+    right:0;
 }

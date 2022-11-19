@@ -1,115 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaSnippets</title>
-    <link rel="stylesheet" href="style/index.css">
-    <link rel="stylesheet" href="style/homeBlock.css">
-    <link rel="stylesheet" href="style/chapterBlock.css">
-    <link rel="stylesheet" href="style/code.css">
-</head>
+    <link rel="stylesheet" href="style/code.css" />
+    <link rel="stylesheet" href="style/index.css" />
+    <link rel="stylesheet" href="style/homeBlock.css" />
+    <link rel="stylesheet" href="style/chapterBlock.css" />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <div class="left-menu">
-            <!-- Title bar -->
-            <div class="toolbar">
-                <div class="reddot"></div>
-                <div class="yeldot"></div>
-                <div class="gredot"></div>
-                <p style="width: 50%;height: 15px;margin:auto;margin-top: 12px;margin-bottom: 12px;text-align: center;color:#000;">JSimple</p>
-            </div>
-            <div class="chapters">
-                <h3>Capitolo 1 - Introduzione</h3>
-                <p class="chapterSect">Come funziona Java</p>
-                <p class="chapterSect">Perchè Java è fatto così</p>
-                <p class="chapterSect">Per cosa viene usato Java</p>
-                <p class="chapterSect">Come risolvere problemi</p>
-            </div>
+      <div class="left-menu">
+        <!-- Title bar -->
+        <div class="toolbar">
+          <div class="reddot"></div>
+          <div class="yeldot"></div>
+          <div class="gredot"></div>
+          <p
+            style="
+              width: 50%;
+              height: 15px;
+              margin: auto;
+              margin-top: 12px;
+              margin-bottom: 12px;
+              text-align: center;
+              color: #000;
+            "
+          >
+            JSimple
+          </p>
         </div>
-        <div class="inner">
-            <!-- Title bar -->
-            <div class="bar">
-                <button class="prev-command">
-                    <div class="first"></div>
-                    <div class="second"></div>
-                </button>
-                <button class="next-command">
-                    <div class="first"></div>
-                    <div class="second"></div>
-                </button>
-                <div class="titlecontainer">
-                    <p>Java - reso più semplice</p>
-                </div>
-                <div class="hamburger-menu" id="hamburger">
-                    <div class="line">
-                        <div class="dot"></div>
-                        <div class="line-inner"></div>
-                    </div>
-                    <div class="line">
-                        <div class="dot"></div>
-                        <div class="line-inner"></div>
-                    </div>
-                    <div class="line">
-                        <div class="dot"></div>
-                        <div class="line-inner"></div>
-                    </div>
-                </div>
-            </div>
-            <!-- actual container -->
-            <div class="data-show">
-                <!-- Here is the main code executed by JavaScript-->
-                <div class="homePage">
-                    <h2>Java - reso più semplice</h2>
-                    <p class="desc">Questo sito web è fatto apposta per rendere la programmazione, specialmente di Java, più facile da capire, tutto è stato preso dalla documentazione ufficiale di Java, iniziando da un semplice programmino fino ad arrivare a vere e proprie applicazioni professionali.</p>
-                    <h3>Come iniziare?</h3>
-                    <p class="desc">Premi il menù in alto a destra, scegli l'argomento e buono studio!</p>
-                    <pre><code class="has-line-data" data-line-start="1" data-line-end="5" class="language-java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainApp</span></span>{
-                        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span></span>{}
-                    }
-                    </code></pre>
-                    <p class="desc bottom">Email sviluppatore:<br><a href="mailto:patric.personal99@gmail.com">patric.personal99@gmail.com</a><br>Contatto telefonico:<br><a href="tel:+393317704837">(+39) 331 770 4837</a><br>Diritti riservati.</p>
-                    
-                </div>
-            </div>
+        <div class="chapters">
+          <h3>Capitolo 1 - Introduzione</h3>
+          <a class="chapterSect" href="javascript:n1()"
+            >1.0.1 Come funziona Java</a
+          >
+          <br>
+          <a class="chapterSect">1.0.2 output in Java</a>
         </div>
+      </div>
+      <div class="inner">
+        <!-- Title bar -->
+        <div class="bar">
+          <button class="prev-command">
+            <div class="first"></div>
+            <div class="second"></div>
+          </button>
+          <button class="next-command">
+            <div class="first"></div>
+            <div class="second"></div>
+          </button>
+          <div class="titlecontainer">
+            <p>Java - reso più semplice</p>
+          </div>
+          <div class="hamburger-menu" id="hamburger">
+            <div class="line">
+              <div class="dot"></div>
+              <div class="line-inner"></div>
+            </div>
+            <div class="line">
+              <div class="dot"></div>
+              <div class="line-inner"></div>
+            </div>
+            <div class="line">
+              <div class="dot"></div>
+              <div class="line-inner"></div>
+            </div>
+          </div>
+        </div>
+        <!-- actual container -->
+        <div class="data-show">
+          <!-- Here is the main code executed by JavaScript-->
+          <div class="homePage">
+            <h2>Java - reso più semplice</h2>
+            <p class="desc">
+              Questo sito web è fatto apposta per rendere la programmazione,
+              specialmente di Java, più facile da capire, tutto è stato preso
+              dalla documentazione ufficiale di Java, iniziando da un semplice
+              programmino fino ad arrivare a vere e proprie applicazioni
+              professionali.
+            </p>
+            <h3>Come iniziare?</h3>
+            <p class="desc">
+              Premi il menù in alto a destra, scegli l'argomento e buono studio!
+            </p>
+            <p class="code" style="    width: 100%;
+            text-align: center;
+        ">
+              <span class="default">public class </span
+              ><span class="class-method">App{...}</span>
+            </p>
+            <p class="desc bottom">
+              Email sviluppatore:<br /><a
+                href="mailto:patric.personal99@gmail.com"
+                >patric.personal99@gmail.com</a
+              ><br />Contatto telefonico:<br /><a href="tel:+393317704837"
+                >(+39) 331 770 4837</a
+              ><br />Diritti riservati.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="lib/jquery.js"></script>
-    <script src="DOMGenerator.js">
-    </script>
     <script>
-        
-        function load(title, code, description) {
-            mainDiv = $("<div>", { "id": "mainDiv", "class": "mainDiv" }).html("Hello world")
-            $(".data-show").html("").append(mainDiv);
+      function load(title, code, description) {
+        mainDiv = $("<div>", { id: "mainDiv", class: "mainDiv" }).html(
+          "Hello world"
+        );
+        $(".data-show").html("").append(mainDiv);
+      }
+      function moveBar() {
+        $(".left-menu").toggleClass("active");
+        if ($(".left-menu").hasClass("active")) {
+          $(".left-menu").css("display", "none");
+          $(".inner").css("width", "100%");
+          $(".next-command, .prev-command, .titlecontainer").css(
+            "display",
+            "block"
+          );
+          $(".hamburger-menu").css("margin", "auto");
+          $(".data-show").css("display", "block");
+        } else {
+          $(".left-menu").css("display", "block");
+          $(".inner").css("width", "auto");
+          $(".next-command, .prev-command, .titlecontainer").css(
+            "display",
+            "none"
+          );
+          $(".hamburger-menu").css("margin", "0");
+          $(".data-show").css("display", "none");
         }
-        function moveBar(){
-            $(".left-menu").toggleClass("active")
-            if($(".left-menu").hasClass("active")){
-                $(".left-menu").css("display","none")
-                $(".inner").css("width","100%");
-                $(".next-command, .prev-command, .titlecontainer").css("display","block");
-                $(".hamburger-menu").css("margin","auto")
-                $(".data-show").css("display","block");
-            }else{
-                $(".left-menu").css("display","block")
-                $(".inner").css("width","auto");
-                $(".next-command, .prev-command, .titlecontainer").css("display","none");
-                $(".hamburger-menu").css("margin","0");
-                $(".data-show").css("display","none");
-            }
+      }
+      $("#hamburger").click(moveBar);
+      function main() {
+        moveBar();
+      }
+      main()
+      function setHomePageCSS() {}
+      function mkElem(t, n) {
+        const r = $(`<${t}>`, {
+          class: n,
+        });
+        return r;
+      }
+      function createElement(
+        destination,
+        title,
+        description1,
+        code,
+        description2
+      ) {
+        const o = mkElem("div", "java-ex");
+        const t = mkElem("h2", "title").text(title).appendTo(o);
+        const d1 = mkElem("p", "desc").text(description1).appendTo(o);
+        if (code !== null) {
+          const c = mkElem("p","code").html(code).appendTo(o);
         }
-        $("#hamburger").click(moveBar)
-        function main(){
-            moveBar()
-        }
-        $(document).load(main())
-        function setHomePageCSS(){
-        }
+        const d2 = mkElem("p", "desc").text(description2).appendTo(o);
+        $(destination).append(o);
+        return o;
+      }
+      function n1() {
+        $(".data-show").html("");
+        createElement(
+          ```.data-show```,
+          ```Come funziona Java```,
+          ```Java è un linguaggio basato su oggetti, gli oggetti in Java sono strutturati come un albero, c'è il tronco, i rami e le foglie<br>In java il nostro tronco è la classe, denominata come ```,
+          ```<span class='default'>public class </span><span class='class-method'>App{<br><span class='default' style='margin-left:4ch'>public static void</span><br>}</span>```,
+          ``````
+        );
+        moveBar();
+      }
     </script>
-</body>
-
+  </body>
 </html>
