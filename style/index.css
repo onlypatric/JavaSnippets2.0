@@ -5,11 +5,6 @@
     transition: all 1s linear;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
-.titlecontainer p{
-    width: 100%;
-    text-align: center;
-    color:#fff;
-}
 a{
     color:rgba(255, 255, 255, 0.541);
     text-decoration: none;
@@ -39,7 +34,7 @@ body{
     height: 100%;
     -webkit-backdrop-filter: blur(10px); /* Use for Safari 9+, Edge 17+ (not a mistake) and iOS Safari 9.2+ */
     backdrop-filter: blur(10px); /* Supported in Chrome 76 */
-
+    
     content: "";
     display: flex;
 }
@@ -193,4 +188,13 @@ button.next-command:hover,button.prev-command:hover{
 div.data-show{
     width: 100%;
     height: 100%;
+}
+.titlecontainer p{
+    line-height: 20px;
+    width: 100%;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    color:#fff;
 }
