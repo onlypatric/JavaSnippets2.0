@@ -1,0 +1,10 @@
+.chapters{
+    padding: 10px;
+}
+.chapters *{
+    color:#000;
+}
+.chapterSect{
+    border-left:1px solid #000;
+    padding-left:2.5ch;
+}
