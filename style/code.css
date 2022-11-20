@@ -1,7 +1,8 @@
 
 .java-ex p.code{
-    width: 50%;
+    width: 90%;
     min-width: 300px;
+    max-width: 600px;
     font-size: .70em;
     margin: auto;
     padding:15px;
