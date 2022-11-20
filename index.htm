@@ -36,9 +36,11 @@
                 <h3>Capitolo 1 - Introduzione</h3>
                 <a class="chapterSect" href="javascript:n1()">1.0.1 Come funziona Java</a>
                 <br>
-                <a class="chapterSect" href="javascript:n2()">1.0.2 le variabili</a>
+                <a class="chapterSect" href="javascript:n2()">1.0.2 le classi</a>
                 <br>
-                <a class="chapterSect" href="javascript:n2()">1.0.2 gli operatori base</a>
+                <a class="chapterSect" href="javascript:n3()">1.0.3 i metodi</a>
+                <br>
+                <a class="chapterSect" href="javascript:n4()">1.0.4 le variabili e i tipi primitivi</a>
             </div>
         </div>
         <div class="inner">
@@ -151,6 +153,7 @@
         ) {
             const o = mkElem("div", "java-ex");
             const t = mkElem("h2", "title").text(title).appendTo(o);
+            $(".titlecontainer p").text(title)
             const d1 = mkElem("p", "desc").html(description1).appendTo(o);
             if (code !== null) {
                 const c = mkElem("p", "code").html(code).appendTo(o);
@@ -185,14 +188,48 @@
             $(".data-show").html("");
             createElement(
                 ".data-show",
-                `Come funziona Java`,
-                `Java è un linguaggio basato su oggetti, gli oggetti in Java sono strutturati come un albero, c'è il tronco, i rami e le foglie. In java il nostro tronco è la classe, denominata come <span class="code">"class"</span>, è il contenitore di tutte le istruzioni che andremo ad inserire, questo contenitore è composto da metodi, immaginiamo di fare un set di azioni e alla fine avere un risultato, un metodo è proprio questo, un set di istruzioni che poi alla fine può dare indietro una parola, un testo, un valore o anche nulla!`,
-                code_template.replace("{codePiece}", "<span class='blank'>System.out.println</span><span class='br1'>(<span class='br2'>\"Hello World\"</span>)</span><span class='blank'>;</span>"),
-                `Qui sopra un semplicissimo codice java, come si può notare <strong>la sintassi Java è molto semplice</strong>, Java teoricamente non ha neanche bisogno di andare a capo, perché <strong>per java andare a capo è il carattere ";"</strong> appunto possiamo vedere che dopo println abbiamo specificato un ";", quindi per la JVM il <strong>;</strong> segna fine istruzione.<br><br>guarda il colore della prima parentesi graffa, non è uguale all'ultima? questo perché <strong>la JVM mette in coorelazione le parentesi graffe, che ci servono da contenitore per le classi, metodi e molto altro</strong>, <strong>apri il tuo editor di testo preferito (consiglio <a href="https://code.visualstudio.com">VSCode di Microsoft</a>), copia e incolla questo codice e prova ad eseguirlo</strong>, che risultato da? Se hai eseguito tutto correttamente la JVM avrà eseguito il <strong>comando println</strong> della <strong>classe System.out</strong>, che è il metodo generale per dare un <strong>output in Java</strong> (ci sono altri metodi ovviamente per farlo), c'è anche <strong>System.in</strong> che è per l'input e <strong>System.err</strong> per gli errori, <strong>la classe System è presente nella JVM in java.lang</strong>, un "<strong>pacchetto</strong>" utilizzato da Java in <strong>maniera interna</strong>, e viene invocato automaticamente.<br><br><br><br>`
+                `Come funzionano le classi`,
+                `le classi sono delle variabili`,
+                code_template.replace("{codePiece}",""),
+                `Questo codice contiene una classe che contiene a sua volta una funzione o metodo main, <strong>Java ragiona a classi perché è un linguaggio di tipo OOP</strong> (object oriented programming), <strong>è orientato ad oggetti che contengono i metodi o i set di istruzioni</strong>, grazie a questo ragionamento noi possiamo costruire applicazioni contenute in una sola classe, arrivando anche a milioni di metodi, ogni classe può avere qualsiasi nome, come si può notare qua c'è scritto "public class", questo indica una classe pubblica (ovvero accessibile da tutti), e poi specifica il nome "App", questo nome può essere di qualsiasi tipo, è importante notare, che quando crei una classe pubblica (public class), il nome dovrebbe essere uguale al nome del file, questo perché la JVM ragiona a file, e quindi una classe pubblica è sempre uguale al nome del file, se metti un altro nome non verrà eseguito in automatico, invece se rimuovi la parte "public" presente in class puoi creare quante classi vuoi con qualsiasi nome
+                <br><br>
+                continua la lettura dei metodi e variabili (1.0.3 e 1.0.4)`
             );
             moveBar();
         }
-        
+        function n3() {
+            $(".data-show").html("");
+            createElement(
+                ".data-show",
+                `Come funzionano i metodi`,
+                `I metodi sono delle variabili contenute esclusivamente all'interno di altre classi e possono essere invocati all'interno o esterno della classe`,
+                code_template.replace("{codePiece}",""),
+                `di base <strong>i metodi devono dare indietro un risultato</strong>, il nostro <strong>"public static void main()" viene processato da Java</strong>, per lui <strong>è un metodo "pubblico e statico, che da come risultato void, e il suo nome è main, come parametri prende la variabile args che deve essere di tipo String[]"</strong>, un po' <strong>difficile da capire</strong>, quindi andiamo passo passo, <strong>"pubblico" o "public"</strong> vuol dire <strong>accessibile dappertutto</strong>, <strong>"statico" o "static"</strong> vuol dire che <strong>non può operare in ambiente dinamico</strong> (non è soggetto a cambiamenti di solito), l'opzione di <strong>mettere "static" è opzionale</strong>, <strong>se non lo metti</strong> però <strong>non potrai usare altri metodi statici</strong> all'interno di esso, <strong>un metodo "statico" può invocare altri metodi non statici e statici</strong>, poi specifica <strong>"void"</strong>, ovvero che <strong>da indietro un valore di tipo void</strong>, void tradotto è <strong>"vuoto"</strong>, quindi <strong>il risultato di questo metodo è nulla</strong>, scopriremo nella <strong>lezione 1.0.5</strong> perché questo esiste, poi specifica <strong>il nome main</strong>, questo nome, <strong>combinato a una classe pubblica, fa capire alla JVM che deve eseguire il metodo subito</strong>, se creiamo lo stesso metodo ma lo chiamiamo "palla" non verrà eseguito in automatico dalla JVM, <strong>i parametri (In questo caso args) sono come dei "requisiti" per far funzionare il metodo</strong>, avete mai provato a usare il comando <strong><span class=".code">cd C:\\Windows\\System32</span></strong>? Questo comando windows e linux <strong>prende come nome istruzione (o metodo) "cd", e come parametro, in questo caso, un percorso relativo o assoluto, come risultato da che ci siamo spostati da una cartella a un altra</strong>, ecco che anche in Java questo si ripresenta, faccio questo riferimento per parlare di <strong>"String[] args"</strong>, che <strong>è un speciale tipo di parametro, che se viene messo nel metodo main vengono passati tutti i parametri che scrivi digitando sul terminale</strong> per eseguirlo (quindi se esegui il comando <strong>"java App.java Hello" dentro a String[] args sarà contenuto \"Hello\"</strong>, il numero di parametri che puoi digitare eseguendo il comando è limitato a 256 caratteri, quindi il comando non deve essere più lungo di 256 caratteri, ci sono metodi per rimuovere questo ovviamente, ma non servirà mai.)
+                <br><br>
+                continua la lettura delle variabili (1.0.4)`
+            );
+            moveBar();
+        }
+        function n4() {
+            $(".data-show").html("");
+            createElement(
+                ".data-show",
+                `Come funzionano i metodi`,
+                `le variabili sono dei contenitori di valori o set di valori che possono avere diversi scopi`,
+                code_template.replace("{codePiece}",`<span class='default'>int</span> <span class='blank'>x = <span class='br2'>0</span>;</span><span class='comment'>/* numero intero*/</span>
+                <br>
+                <span class='default' style='margin-left:8ch'>float</span> <span class='blank'>y = <span class='br2'>25.5f</span>;</span><span class='comment'>/* numero decimale (32 byte max) */</span>
+                <br>
+                <span class='default' style='margin-left:8ch'>double</span> <span class='blank'>z = <span class='br2'>25.5</span>;</span><span class='comment'>/* numero decimale (64 byte max) */</span>
+                <br>
+                <span class='default' style='margin-left:8ch'>char</span> <span class='blank'>w = <span class='br2'>'a'</span>;</span><span class='comment'>/* carattere singolo */</span>
+                <br>
+                <span class='class-method' style='margin-left:8ch'>String</span> <span class='blank'>testo_principale = <span class='br2'>\"Ciao!!!\"</span>;</span><span class='comment'>/* set di uno o più caratteri */</span>
+                <br>`),
+                `come possiamo notare la sintassi della variabile è semplice, bisogna prima specificare il tipo di variabile, poi il nome di essa (che deve iniziare con un carattere dell'alfabeto e può avere numeri dal 2° carattere in poi, in più può anche avere "_"), successivamente si impone un uguale (per assegnare un valore) e un valore`
+            );
+            moveBar();
+        }
     </script>
 </body>
 
